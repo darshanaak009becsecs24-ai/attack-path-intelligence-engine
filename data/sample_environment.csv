@@ -1,0 +1,11 @@
+source,target,relationship,source_type,target_type,source_privilege,weakness,severity,asset_criticality,business_impact
+analyst01,Finance-Readers,member_of,user,group,low,excessive_group_membership,medium,critical,high
+Finance-Readers,Finance-Share,read_access,group,server,low,overbroad_share_permission,high,critical,critical
+Finance-Share,Payroll-DB,network_trust,server,server,low,weak_network_segmentation,high,critical,critical
+Payroll-DB,Payroll-Records,hosts,server,critical_asset,low,unpatched_sensitive_system,critical,critical,critical
+svc_backup,Backup-Admins,member_of,service_account,group,medium,overprivileged_service_account,high,critical,high
+Backup-Admins,Payroll-DB,admin_access,group,server,low,unnecessary_admin_permission,critical,critical,critical
+intern02,Staff-Portal,authenticated_access,user,server,low,none,none,high,medium
+Staff-Portal,Public-Docs,read_access,server,asset,low,none,low,medium,low
+ops01,Ops-Group,member_of,user,group,high,none,none,high,medium
+Ops-Group,Monitoring,admin_access,group,server,low,none,medium,high,medium
